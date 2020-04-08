@@ -10,4 +10,4 @@
   * Assembly Language
   
 ### Modifying HTML Pages 
-After committing and pushing changes to the master branch, run the command `npm run deploy` to publish the contents to the website.
+After committing and pushing changes, run the command `npm run deploy` to publish the contents to the website.
