@@ -12,13 +12,13 @@ In this section we will see who interacts with the control unit as well as how t
 of the control unit is done.
 
 <h3>Interactions - Input and Output</h3>
-The control unit is a part of the CPU that is able to interface with outer components. These outer components include
+<p>The control unit is a part of the CPU that is able to interface with outer components. These outer components include
 the ALU and memory, the clock, and any other input and output devices which may want to communicate with the CPU. The
 control unit is notable for not actually executing instructions itself, but for directing the other components of the
-CPU to execute them.
+CPU to execute them.</p>
 
 <h3>How it Works</h3>
-The control unit is responsible for a few things during the instruction cycle. Its first responsibility is to “fetch”
+<p>The control unit is responsible for a few things during the instruction cycle. Its first responsibility is to “fetch”
 the instruction from the computer’s memory. An instruction is any code that tells the cpu to perform any task, the most
 commonly used include loading numbers from another location in memory, performing addition on two numbers, jumping to
 another location in memory, etc. At this point, the control unit looks in the memory for the instruction, and reads the
@@ -27,27 +27,28 @@ unit looks at the bit string that is the instruction and figures out what specif
 and based on that, any other values associated with that instruction in the bit string, e.g. register numbers for
 arithmetic operations, memory addresses for memory-related operations such as reading and writing from memory, etc. The
 final responsibility of the control unit is to allow the memory to send the instruction output to any input or output
-devices.
+devices.</p>
 
 <h3>Different Types of Control Units</h3>
-Even though there are a lot of actions a control unit can perform, there are only a few ways a control unit can be
+
+<p>Even though there are a lot of actions a control unit can perform, there are only a few ways a control unit can be
 implemented. The two best known types of control units are hardware control and microprogram control units. An easy way
 to remember the two is to think that one does the work using hardware and the other does the work using software. There
 are many differences between the two of them each having their own pros and cons. This leads to trade-offs that must be
-taken into consideration when deciding what control unit architecture will be implemented.
+taken into consideration when deciding what control unit architecture will be implemented.</p>
 
-Hardware control units are completely implemented at the hardware level and thus do not allow for changes after the fact
+<p>Hardware control units are completely implemented at the hardware level and thus do not allow for changes after the fact
 without rearranging hardware components. Hardware control units generate control signals using combinational logic
 circuits, leading to rapid execution of instructions compared to the microprogram control implementation. However,
 because logic gates are used to implement the logical circuit, the cost of manufacturing the control unit makes hardware
 control units the pricier option. Another downside of using logical circuits is that complex instructions cannot be
 practically implemented without also making the circuit complex. This is why this type of control unit shows the
-ideality of Reduced Instruction Set Computers or RISC.
+ideality of Reduced Instruction Set Computers or RISC.</p>
 
-On the other hand, microprogram controllers generate signals using micro instructions that are stored in the control
+<p>On the other hand, microprogram controllers generate signals using micro instructions that are stored in the control
 memory. Because the instructions are in software, the modification of them is very simple compared to the hardware
 control unit. The usage of software also permits the usage of more complex instructions without having to increase the
 complexity of the architecture like it is done for the hardware implementation. The complex instruction set computers (CISC) 
-is shown to be the ideology behind the implementation of control units in the microprogram way.
+is shown to be the ideology behind the implementation of control units in the microprogram way.</p>
 
 <h3>Step by Step Example</h3>
